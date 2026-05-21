@@ -3,168 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZEVROK | Affordable Luxury Apparel</title>
-    <!-- Tailwind CSS for mobile-first modern design -->
+    <title>ZEVROK | Affordable Luxury Architecture</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #080B11; /* Sleek, dark canvas */
+            background-color: #07090E;
+        }
+        /* Fixes the ugly yellow/green mobile browser autofill background */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus {
+            -webkit-text-fill-color: #ffffff !important;
+            -webkit-box-shadow: 0 0 0px 1000px #0F131E inset !important;
+            transition: background-color 5000s ease-in-out 0s;
         }
     </style>
 </head>
-<body class="text-gray-100 antialiased min-h-screen flex flex-col justify-between">
+<body class="text-gray-200 antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- Header / Navigation -->
-    <header class="sticky top-0 z-40 backdrop-blur-md bg-[#080B11]/80 border-b border-gray-900 px-6 py-4 flex justify-between items-center">
-        <div class="text-2xl font-extrabold tracking-widest text-white">ZEVROK</div>
-        <div class="flex items-center space-x-4">
-            <!-- Fixed Cart Button (Triggers Auth Modal) -->
-            <button onclick="openAuthModal('login')" class="relative p-2 text-gray-400 hover:text-white transition focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                </svg>
-                <span class="absolute top-1 right-1 bg-indigo-500 text-[10px] text-white rounded-full w-4 h-4 flex items-center justify-center font-bold">0</span>
+    <div id="landingPageScreen" class="flex flex-col justify-between flex-grow">
+        <header class="sticky top-0 z-40 backdrop-blur-md bg-[#07090E]/90 border-b border-gray-900/60 px-6 py-5 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-widest text-white">ZEVROK</div>
+            <button onclick="openAuthModal()" class="text-xs font-semibold uppercase tracking-wider text-indigo-400 bg-indigo-950/40 border border-indigo-900/60 px-4 py-2 rounded-xl transition hover:bg-indigo-900/40">
+                Portal
             </button>
-        </div>
-    </header>
+        </header>
 
-    <!-- Main Content: Premium Affordable Luxury Landing -->
-    <main class="flex-grow flex items-center justify-center px-6 py-12 relative overflow-hidden">
-        <!-- Radial ambient background glow -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-600/10 rounded-full blur-[140px] pointer-events-none"></div>
-        
-        <div class="relative z-10 max-w-md mx-auto text-center space-y-8">
-            <div class="space-y-3">
-                <span class="text-indigo-400 text-xs font-bold tracking-widest uppercase bg-indigo-950/40 border border-indigo-900/50 px-3 py-1.5 rounded-full">
-                    A New Era of Fashion
+        <main class="px-6 py-12 max-w-xl mx-auto space-y-16 relative">
+            <div class="absolute top-20 left-1/2 -translate-x-1/2 w-72 h-72 bg-indigo-600/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <section class="text-center space-y-6 pt-6 relative z-10">
+                <span class="text-indigo-400 text-[10px] font-bold tracking-[0.25em] uppercase bg-indigo-950/60 border border-indigo-900/40 px-3.5 py-2 rounded-full">
+                    Manifesto 01 / Anti-Markup
                 </span>
-                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight pt-2">
-                    Affordable luxury,<br>uncompromised.
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
+                    Affordable luxury,<br><span class="text-gray-400 font-medium italic">re-engineered.</span>
                 </h1>
-            </div>
-
-            <div class="space-y-4 text-gray-400 text-sm leading-relaxed max-w-sm mx-auto">
-                <p>
-                    At <span class="text-white font-semibold">ZEVROK</span>, we bridge the gap between high-end streetwear craftsmanship and accessible pricing. We don't believe luxury should require a premium markup.
+                <p class="text-gray-400 text-sm leading-relaxed max-w-sm mx-auto">
+                    The traditional fashion industry is broken. We choose to build garments to a higher standard, ignoring luxury markups.
                 </p>
-                <p>
-                    Every piece is meticulously engineered with heavy-weight custom fabrics, avant-garde silhouettes, and minimalist execution—offering you true elite-tier quality straight from the source.
+                <div class="pt-4">
+                    <button onclick="openAuthModal()" class="w-full bg-white text-black font-bold px-6 py-4 rounded-xl shadow-lg hover:bg-gray-200 transition text-xs uppercase tracking-widest">
+                        Enter The Brand Portal
+                    </button>
+                </div>
+            </section>
+
+            <hr class="border-gray-900">
+
+            <section class="space-y-4">
+                <div class="text-indigo-400 font-bold text-xs uppercase tracking-wider">01 // THE PHILOSOPHY</div>
+                <h3 class="text-xl font-bold text-white tracking-tight">The Myth of the Price Tag</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    High fashion houses charge up to 10x the actual structural cost of a garment simply to fund corporate marketing campaigns and retail real estate. ZEVROK operates on a direct-to-consumer infrastructure. We focus 100% of our budget on textiles and cutting-edge design, cutting out middle-men.
                 </p>
+            </section>
+
+            <section class="space-y-4">
+                <div class="text-indigo-400 font-bold text-xs uppercase tracking-wider">02 // ARTIFACT ARCHITECTURE</div>
+                <h3 class="text-xl font-bold text-white tracking-tight">Uncompromising Fabrication</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Our drops are characterized by custom milled fabrics. Expect heavy-weight 450GSM organic loopback cotton hoodies, custom-dyed anti-shrink interlock combed cotton tees, and industrial-grade reinforced stitch patterns meant to last generations.
+                </p>
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="text-[11px] bg-gray-900 border border-gray-800 text-gray-300 px-3 py-1 rounded-md">450GSM Fabrics</span>
+                    <span class="text-[11px] bg-gray-900 border border-gray-800 text-gray-300 px-3 py-1 rounded-md">Custom Silhouettes</span>
+                    <span class="text-[11px] bg-gray-900 border border-gray-800 text-gray-300 px-3 py-1 rounded-md">Zero Markup pricing</span>
+                </div>
+            </section>
+
+            <section class="space-y-4">
+                <div class="text-indigo-400 font-bold text-xs uppercase tracking-wider">03 // THE ACCESS BLUEPRINT</div>
+                <h3 class="text-xl font-bold text-white tracking-tight">Exclusive Drop Sequence</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    To bypass traditional overproduction waste, ZEVROK releases items in highly controlled, limited batches. Registered accounts receive priority access codes via this portal to finalize collections before public viewing frames unlock.
+                </p>
+            </section>
+        </main>
+
+        <footer class="border-t border-gray-950 bg-[#04060A] px-6 py-6 text-center text-[11px] text-gray-600 tracking-wider">
+            &copy; 2026 ZEVROK LABS. POWERED BY ARCHITECTURAL STREETWEAR.
+        </footer>
+    </div>
+
+
+    <div id="adminPanelScreen" class="hidden min-h-screen flex flex-col justify-between bg-[#0B0F19]">
+        <header class="bg-[#111625] border-b border-gray-800/80 px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs uppercase tracking-widest font-bold text-gray-400">ZEVROK Central Core</span>
+            </div>
+            <button onclick="logout()" class="text-xs text-red-400 hover:text-red-300 font-semibold transition">
+                Exit Panel
+            </button>
+        </header>
+
+        <main class="p-6 max-w-xl mx-auto w-full space-y-8 flex-grow">
+            <div>
+                <h2 class="text-2xl font-extrabold text-white tracking-tight">Creator Dashboard</h2>
+                <p class="text-xs text-gray-400 mt-1">Directly curate products and live market parameters.</p>
             </div>
 
-            <!-- Action Buttons -->
-            <div class="pt-4 flex flex-col space-y-3">
-                <button onclick="openAuthModal('register')" class="w-full bg-white text-black font-semibold px-6 py-3.5 rounded-xl shadow-lg hover:bg-gray-200 transition text-sm tracking-wide">
-                    Create Account to Access Drop
-                </button>
-                <button onclick="openAuthModal('login')" class="w-full bg-transparent border border-gray-800 text-gray-300 font-medium px-6 py-3.5 rounded-xl hover:border-gray-700 hover:text-white transition text-sm">
-                    Sign In to Existing Profile
-                </button>
-            </div>
-        </div>
-    </main>
+            <section class="bg-[#141A29] border border-gray-800/80 rounded-2xl p-5 space-y-5 shadow-xl">
+                <h3 class="text-sm font-bold tracking-wider text-indigo-400 uppercase">Product Deployment Entry</h3>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold mb-1.5">Product Title</label>
+                        <input type="text" id="prodTitle" placeholder="e.g., Heavyweight Oversized Hoodie" class="w-full bg-[#0B0F19] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 transition">
+                    </div>
 
-    <!-- Footer -->
-    <footer class="border-t border-gray-950 bg-[#05070B] px-6 py-6 text-center text-[11px] text-gray-600">
-        <p>&copy; 2026 ZEVROK Labs. All rights reserved.</p>
-    </footer>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold mb-1.5">Luxury Price Point ($ USD)</label>
+                        <input type="number" id="prodPrice" placeholder="e.g., 65.00" class="w-full bg-[#0B0F19] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 transition">
+                    </div>
 
-    <!-- INTERACTIVE AUTHENTICATION MODAL (Login / Register) -->
-    <div id="authModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden animate-fade-in">
-        <div class="bg-[#0E131F] border border-gray-800/80 w-full max-w-sm rounded-2xl p-6 relative shadow-2xl">
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold mb-1.5">Garment Visual Reference</label>
+                        <div class="relative bg-[#0B0F19] border-2 border-dashed border-gray-800 rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer hover:border-gray-700 transition">
+                            <input type="file" id="prodImage" accept="image/*" onchange="previewImage(event)" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full">
+                            
+                            <div id="uploadPlaceholder" class="space-y-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <p class="text-xs text-gray-400 font-medium">Tap to upload item image</p>
+                            </div>
+                            <img id="imgPreview" class="hidden w-24 h-24 object-cover rounded-lg border border-gray-800 shadow-md">
+                        </div>
+                    </div>
+
+                    <button onclick="addProduct()" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold uppercase tracking-widest py-3.5 rounded-xl transition shadow-lg pt-4">
+                        Publish Product Live
+                    </button>
+                </div>
+            </section>
+
+            <section class="space-y-4">
+                <h3 class="text-sm font-bold tracking-wider text-white uppercase">Live Showroom Feed</h3>
+                <div id="productsContainer" class="grid grid-cols-2 gap-4">
+                    <div class="bg-[#141A29] border border-gray-800/80 rounded-2xl p-3 flex flex-col justify-between">
+                        <div class="aspect-square bg-gray-900 rounded-xl mb-3 flex items-center justify-center text-gray-600 font-mono text-xs uppercase tracking-widest">Prototype</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-white truncate">Sample Boxy Tee</h4>
+                            <p class="text-xs text-indigo-400 mt-0.5">$38.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <div id="authModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md hidden">
+        <div class="bg-[#0F1320] border border-gray-800 w-full max-w-sm rounded-2xl p-6 relative shadow-2xl">
             
-            <!-- Close Button -->
             <button onclick="closeAuthModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-300 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
                 </svg>
             </button>
 
-            <!-- LOGIN VIEW -->
-            <div id="loginView">
-                <h3 class="text-xl font-bold text-white tracking-tight">Welcome Back</h3>
-                <p class="text-xs text-gray-400 mt-1 mb-6">Enter your details to view your cart and profile.</p>
+            <div>
+                <h3 class="text-xl font-bold text-white tracking-tight">Access Gateway</h3>
+                <p class="text-xs text-gray-400 mt-1 mb-6">Input administration parameters to connect.</p>
                 
-                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Logging in...');">
+                <form class="space-y-4" onsubmit="handleLogin(event)">
                     <div>
-                        <label class="block text-[11px] uppercase tracking-wider text-gray-400 font-semibold mb-1.5">Email Address</label>
-                        <input type="email" placeholder="name@domain.com" required class="w-full bg-[#080B11] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 transition">
+                        <label class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold mb-1.5">Admin Email</label>
+                        <input type="email" id="authEmail" value="godswillakordenver@gmail.com" required class="w-full bg-[#0F1320] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 transition">
                     </div>
                     <div>
-                        <label class="block text-[11px] uppercase tracking-wider text-gray-400 font-semibold mb-1.5">Password</label>
-                        <input type="password" placeholder="••••••••" required class="w-full bg-[#080B11] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 transition">
+                        <label class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold mb-1.5">Password</label>
+                        <input type="password" id="authPassword" placeholder="••••••••" required class="w-full bg-[#0F1320] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 transition">
                     </div>
-                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold py-3 rounded-xl shadow-md transition pt-3">
-                        Sign In
+                    <div id="errorMessage" class="text-xs text-red-400 hidden font-medium">Invalid administration credentials.</div>
+                    
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold uppercase tracking-widest py-3.5 rounded-xl shadow-md transition pt-4">
+                        Authorize Session
                     </button>
                 </form>
-                <p class="text-xs text-gray-400 text-center mt-6">
-                    Don't have an account? <button onclick="toggleAuthView('register')" class="text-indigo-400 font-semibold hover:underline">Create one</button>
-                </p>
             </div>
-
-            <!-- REGISTER VIEW -->
-            <div id="registerView" class="hidden">
-                <h3 class="text-xl font-bold text-white tracking-tight">Create Account</h3>
-                <p class="text-xs text-gray-400 mt-1 mb-6">Join Zevrok for priority access to luxury drops.</p>
-                
-                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Account created!');">
-                    <div>
-                        <label class="block text-[11px] uppercase tracking-wider text-gray-400 font-semibold mb-1.5">Full Name</label>
-                        <input type="text" placeholder="John Doe" required class="w-full bg-[#080B11] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 transition">
-                    </div>
-                    <div>
-                        <label class="block text-[11px] uppercase tracking-wider text-gray-400 font-semibold mb-1.5">Email Address</label>
-                        <input type="email" placeholder="name@domain.com" required class="w-full bg-[#080B11] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 transition">
-                    </div>
-                    <div>
-                        <label class="block text-[11px] uppercase tracking-wider text-gray-400 font-semibold mb-1.5">Password</label>
-                        <input type="password" placeholder="Min. 8 characters" required class="w-full bg-[#080B11] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500 transition">
-                    </div>
-                    <button type="submit" class="w-full bg-white text-black text-sm font-bold py-3 rounded-xl shadow-md transition pt-3">
-                        Register Now
-                    </button>
-                </form>
-                <p class="text-xs text-gray-400 text-center mt-6">
-                    Already registered? <button onclick="toggleAuthView('login')" class="text-indigo-400 font-semibold hover:underline">Sign In</button>
-                </p>
-            </div>
-
         </div>
     </div>
 
-    <!-- Simple JavaScript for Modal Logic -->
     <script>
-        const modal = document.getElementById('authModal');
-        const loginView = document.getElementById('loginView');
-        const registerView = document.getElementById('registerView');
+        const authModal = document.getElementById('authModal');
+        const landingPageScreen = document.getElementById('landingPageScreen');
+        const adminPanelScreen = document.getElementById('adminPanelScreen');
+        const errorMessage = document.getElementById('errorMessage');
+        
+        let loadedImgBase64 = "";
 
-        function openAuthModal(view) {
-            modal.classList.remove('hidden');
-            toggleAuthView(view);
+        function openAuthModal() {
+            authModal.classList.remove('hidden');
+            errorMessage.classList.add('hidden');
         }
 
         function closeAuthModal() {
-            modal.classList.add('hidden');
+            authModal.classList.add('hidden');
         }
 
-        function toggleAuthView(view) {
-            if (view === 'login') {
-                loginView.classList.remove('hidden');
-                registerView.classList.add('hidden');
+        // Live Operational Login Function
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('authEmail').value;
+            const password = document.getElementById('authPassword').value;
+
+            // Simple client-side unlock. You can type any password to test, or customize it below.
+            if (email === "godswillakordenver@gmail.com" && password !== "") {
+                // Smooth transition straight into the Admin panel 
+                authModal.classList.add('hidden');
+                landingPageScreen.classList.add('hidden');
+                adminPanelScreen.classList.remove('hidden');
+                window.scrollTo(0, 0);
             } else {
-                loginView.classList.add('hidden');
-                registerView.classList.remove('hidden');
+                errorMessage.classList.remove('hidden');
             }
         }
 
-        // Close modal if user clicks outside the modal content window
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                closeAuthModal();
+        function logout() {
+            adminPanelScreen.classList.add('hidden');
+            landingPageScreen.classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        // Native Mobile File Reader Processing 
+        function previewImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    loadedImgBase64 = e.target.result;
+                    document.getElementById('uploadPlaceholder').classList.add('hidden');
+                    const imgPreview = document.getElementById('imgPreview');
+                    imgPreview.src = loadedImgBase64;
+                    imgPreview.classList.remove('hidden');
+                }
+                reader.readAsDataURL(file);
             }
+        }
+
+        // Dynamic Product Creation Engine
+        function addProduct() {
+            const title = document.getElementById('prodTitle').value;
+            const price = document.getElementById('prodPrice').value;
+            const container = document.getElementById('productsContainer');
+
+            if (!title || !price) {
+                alert("Please declare both title and pricing matrix details.");
+                return;
+            }
+
+            // Fallback placeholder image if none selected
+            const finalImg = loadedImgBase64 || "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%231F2937'><rect width='100' height='100'/></svg>";
+
+            // Create HTML element string architecture
+            const productHTML = `
+                <div class="bg-[#141A29] border border-gray-800/80 rounded-2xl p-3 flex flex-col justify-between animate-fade-in">
+                    <img src="${finalImg}" class="aspect-square w-full object-cover rounded-xl mb-3 border border-gray-800">
+                    <div>
+                        <h4 class="text-xs font-bold text-white truncate">${title}</h4>
+                        <p class="text-xs text-indigo-400 mt-0.5">$${parseFloat(price).toFixed(2)}</p>
+                    </div>
+                </div>
+            `;
+
+            // Inject structural component into container
+            container.insertAdjacentHTML('afterbegin', productHTML);
+
+            // Clean inputs for next garment sequence entry
+            document.getElementById('prodTitle').value = "";
+            document.getElementById('prodPrice').value = "";
+            document.getElementById('prodImage').value = "";
+            document.getElementById('uploadPlaceholder').classList.remove('hidden');
+            document.getElementById('imgPreview').classList.add('hidden');
+            loadedImgBase64 = "";
         }
     </script>
 </body>
