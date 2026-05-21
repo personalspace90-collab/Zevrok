@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEVROK | Premium Apparel</title>
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0B0F19; /* Ultra dark modern background */
+        }
+    </style>
+</head>
+<body class="text-gray-100 antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0B0F19]/80 border-b border-gray-800/50 px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-extrabold tracking-widest text-white">ZEVROK</div>
+        <div class="flex items-center space-x-6">
+            <button class="relative text-gray-300 hover:text-white transition">
+                <!-- Cart Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+                <span class="absolute -top-1 -right-2 bg-indigo-500 text-xs text-white rounded-full w-4 h-4 flex items-center justify-center font-bold">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[70vh] flex items-center justify-center px-6 text-center overflow-hidden">
+        <!-- Subtle dark ambient glow in background -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-indigo-600/10 rounded-full blur-[120px]"></div>
+        
+        <div class="relative z-10 max-w-md mx-auto">
+            <span class="text-indigo-400 text-xs font-semibold tracking-widest uppercase">Drop 01 / Cyber Minimal</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mt-3 mb-4">
+                Redefining Modern streetwear.
+            </h1>
+            <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                Premium, heavy-weight garments engineered for the digital generation. Minimalist design. Maximum identity.
+            </p>
+            <a href="#collection" class="inline-block bg-white text-black font-semibold px-8 py-3.5 rounded-xl shadow-lg hover:bg-gray-200 transition text-sm tracking-wide w-full sm:w-auto">
+                Explore Collection
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Collection -->
+    <section id="collection" class="px-6 py-12 max-w-4xl mx-auto">
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <h2 class="text-xl font-bold text-white tracking-tight">Latest Releases</h2>
+                <p class="text-xs text-gray-500 mt-1">Available in limited quantities</p>
+            </div>
+            <a href="#" class="text-xs font-semibold text-indigo-400 hover:underline tracking-wider uppercase">View All</a>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-2 gap-4">
+            <!-- Product 1 -->
+            <div class="group relative bg-[#131926] border border-gray-800/60 rounded-2xl p-3 flex flex-col justify-between">
+                <div class="aspect-square w-full rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 mb-4 flex items-center justify-center relative overflow-hidden">
+                    <!-- Placeholder graphic representing premium tee -->
+                    <div class="w-24 h-24 border border-gray-700/50 rounded-lg flex items-center justify-center text-[10px] text-gray-500 tracking-widest uppercase">ZV-01</div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white tracking-wide">Cyber-Mesh Heavy Tee</h3>
+                    <p class="text-xs text-gray-400 mt-1">$45.00</p>
+                </div>
+                <button class="mt-4 w-full bg-gray-800/80 hover:bg-gray-700 text-white text-xs font-medium py-2 rounded-lg transition">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="group relative bg-[#131926] border border-gray-800/60 rounded-2xl p-3 flex flex-col justify-between">
+                <div class="aspect-square w-full rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 mb-4 flex items-center justify-center relative overflow-hidden">
+                    <div class="w-24 h-24 border border-gray-700/50 rounded-lg flex items-center justify-center text-[10px] text-gray-500 tracking-widest uppercase">ZV-02</div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-white tracking-wide">Minimalist Cargo Hoodie</h3>
+                    <p class="text-xs text-gray-400 mt-1">$75.00</p>
+                </div>
+                <button class="mt-4 w-full bg-gray-800/80 hover:bg-gray-700 text-white text-xs font-medium py-2 rounded-lg transition">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter / Launch Notification -->
+    <section class="mx-6 my-12 bg-gradient-to-b from-[#131926] to-[#0B0F19] border border-gray-800/80 rounded-2xl p-6 text-center max-w-xl md:mx-auto">
+        <h3 class="text-lg font-bold text-white tracking-tight">Join the Inner Circle</h3>
+        <p class="text-xs text-gray-400 mt-2 mb-6 max-w-xs mx-auto leading-relaxed">
+            Get exclusive access to private drops, secret discounts, and restock alerts.
+        </p>
+        <form class="space-y-3 max-w-sm mx-auto" onsubmit="event.preventDefault(); alert('Subscribed to Zevrok!');">
+            <input type="email" placeholder="Enter your email" required
+                class="w-full bg-[#0B0F19] border border-gray-800 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 transition">
+            <button type="submit" 
+                class="w-full bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold py-3 rounded-xl shadow-md transition">
+                Notify Me
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-900 bg-[#070A10] px-6 py-8 text-center text-xs text-gray-600">
+        <p>&copy; 2026 ZEVROK Labs. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
